@@ -1,4 +1,5 @@
-interface Character {
+export interface Character {
+  id: number;
   name: string;
   family: string;
   age: number;
