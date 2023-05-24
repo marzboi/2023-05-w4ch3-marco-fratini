@@ -21,10 +21,6 @@ body {
   object-position: top;
   height: 200px;
 }
-
-.dead {
-  scale: -1;
-}
 .character__card {
   position: relative;
   border: none;
@@ -99,8 +95,4 @@ body {
   position: absolute;
   right: 5px;
   top: 5px;
-}
-
-.hidden {
-  display: none;
 }

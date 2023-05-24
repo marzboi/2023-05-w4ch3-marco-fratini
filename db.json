@@ -36,16 +36,7 @@
       "age": 31,
       "alive": true,
       "warcry": "I think I will die soon",
-      "Supports": {
-        "id": 3,
-        "name": "Daenerys",
-        "lastname": "Targaryen",
-        "age": 29,
-        "weapon": "dragons",
-        "alive": true,
-        "warcry": "I strike first, and ask questions later",
-        "dexterity": 3
-      }
+      "supports": 3
     },
     {
       "id": 5,
@@ -55,16 +46,7 @@
       "alive": true,
       "pelotismo": 0,
       "warcry": "I am based",
-      "Supports": {
-        "id": 2,
-        "name": "Jaime",
-        "lastname": "Lannister",
-        "age": 33,
-        "weapon": "sword",
-        "alive": true,
-        "warcry": "I strike first, and ask questions later",
-        "dexterity": 8
-      }
+      "supports": 2
     }
   ]
 }

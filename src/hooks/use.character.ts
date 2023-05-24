@@ -1,14 +1,14 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Character } from "../models/character";
+import { AllCharacters } from "../models/character";
 import { ApiRepository } from "../services/api.repository";
 import { consoleError } from "../services/errros";
 
 export function useCharacters() {
-  const [characters, setCharacters] = useState<Character[]>([]);
+  const [characters, setCharacters] = useState<AllCharacters[]>([]);
   const characterUrl = "http://localhost:3000/characters";
 
-  const repo: ApiRepository<Character> = useMemo(
-    () => new ApiRepository<Character>(characterUrl),
+  const repo: ApiRepository<AllCharacters> = useMemo(
+    () => new ApiRepository<AllCharacters>(characterUrl),
     []
   );
 
@@ -21,9 +21,12 @@ export function useCharacters() {
     handleLoad();
   }, [handleLoad]);
 
-  const handleKill = async (character: Character) => {
+  const handleKill = async (character: AllCharacters) => {
     try {
-      const updatedCharacter = await repo.update(character.id, character);
+      const updatedCharacter = await repo.update(character.id, {
+        ...character,
+        alive: false,
+      });
       setCharacters(
         characters.map((item) =>
           item.id === character.id ? updatedCharacter : item

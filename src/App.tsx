@@ -1,3 +1,9 @@
+import { List } from "./components/list";
+
 export function App() {
-  return <>\</>;
+  return (
+    <>
+      <List></List>
+    </>
+  );
 }
