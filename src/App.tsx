@@ -1,9 +1,9 @@
-import { PersonaData } from "./components/personal.data";
+import { List } from "./components/list";
 
 export function App() {
   return (
     <>
-      <PersonaData></PersonaData>
+      <List></List>
     </>
   );
 }
