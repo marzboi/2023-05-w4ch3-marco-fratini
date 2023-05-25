@@ -80,7 +80,10 @@ export function CharacterCard({ item, handleKill }: PropsType) {
             </div>
           </div>
         </div>
-        <i className="emoji"></i>
+        {isKing(item) && <i className="emoji">👑</i>}
+        {isSwordsman(item) && <i className="emoji">🗡️</i>}
+        {isKingshand(item) && <i className="emoji">🗿</i>}
+        {isSquire(item) && <i className="emoji">🛡️</i>}
       </div>
     </li>
   );
