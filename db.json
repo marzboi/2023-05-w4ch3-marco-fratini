@@ -6,7 +6,7 @@
       "lastname": "Baratheon",
       "age": 18,
       "reignyears": 3,
-      "alive": true,
+      "alive": false,
       "warcry": "You are all going to die"
     },
     {

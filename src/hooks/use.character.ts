@@ -5,7 +5,7 @@ import { consoleError } from "../services/errros";
 
 export function useCharacters() {
   const [characters, setCharacters] = useState<AllCharacters[]>([]);
-  const characterUrl = "http://localhost:3000/characters";
+  const characterUrl = "http://localhost:3000/characters/";
 
   const repo: ApiRepository<AllCharacters> = useMemo(
     () => new ApiRepository<AllCharacters>(characterUrl),
