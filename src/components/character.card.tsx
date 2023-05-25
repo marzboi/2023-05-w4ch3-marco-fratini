@@ -39,7 +39,9 @@ export function CharacterCard({ item, handleKill }: PropsType) {
         <img
           src={`img/${item.name.toLowerCase()}.jpg`}
           alt={`${item.name} ${item.family}`}
-          className="character__picture card-img-top"
+          className={`character__picture card-img-top ${
+            !item.alive ? "dead" : ""
+          }`}
         />
         <div className="card-body">
           <h2 className="character__name card-title h4">
@@ -50,8 +52,11 @@ export function CharacterCard({ item, handleKill }: PropsType) {
               <li>Edad: {item.age}</li>
               <li>
                 Estado:
-                <i className="fas fa-thumbs-down"></i>
-                <i className="fas fa-thumbs-up"></i>
+                {item.alive ? (
+                  <i className="fas fa-thumbs-up"></i>
+                ) : (
+                  <i className="fas fa-thumbs-down"></i>
+                )}
               </li>
             </ul>
           </div>
